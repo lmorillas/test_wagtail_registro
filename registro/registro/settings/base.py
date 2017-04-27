@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
     'django.contrib.admin',
     'django.contrib.sites',
-    'registration',
+    
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -57,6 +57,10 @@ INSTALLED_APPS = [
     'api',
     'blog',
     'graphene_django',
+
+    'registration',
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -154,6 +158,14 @@ GRAPHENE = {
     'SCHEMA': 'api.schema.schema',
 }
 
+# Crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-CCOUNT_ACTIVATION_DAYS = 1 # One-week activation window; you may, of course, use a different value.
-REGISTRATION_AUTO_LOGIN = False 
+# Registration redux setiing
+
+ACCOUNT_ACTIVATION_DAYS = 1
+REGISTRATION_AUTO_LOGIN = False
+REGISTRATION_EMAIL_HTML = True
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+

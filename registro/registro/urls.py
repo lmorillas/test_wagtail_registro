@@ -31,8 +31,10 @@ urlpatterns = [
     url(r'^api/graphql', csrf_exempt(GraphQLView.as_view())),
     url(r'^api/graphiql', csrf_exempt(GraphQLView.as_view(graphiql=True, pretty=True))),
     #url(r'^cuentas/', include('registration.backends.simple.urls')),
-    (r'^cuentas/', include('registration.backends.default.urls')),
-]
+    #(r'^cuentas/', include('registration.backends.default.urls')),
+    # # Registration redux url
+    url(r'^accounts/', include('registration.backends.default.urls')),
+]   
 
 
 if settings.DEBUG:
