@@ -30,7 +30,8 @@ urlpatterns = [
     #    url(r'^pages/', include(wagtail_urls)),
     url(r'^api/graphql', csrf_exempt(GraphQLView.as_view())),
     url(r'^api/graphiql', csrf_exempt(GraphQLView.as_view(graphiql=True, pretty=True))),
-    url(r'^accounts/', include('registration.backends.hmac.urls')),
+    #url(r'^cuentas/', include('registration.backends.simple.urls')),
+    (r'^cuentas/', include('registration.backends.default.urls')),
 ]
 
 

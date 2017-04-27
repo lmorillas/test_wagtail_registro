@@ -45,11 +45,14 @@ INSTALLED_APPS = [
     'taggit',
 
     'django.contrib.admin',
+    'django.contrib.sites',
+    'registration',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 
     'api',
     'blog',
@@ -152,5 +155,5 @@ GRAPHENE = {
 }
 
 
-ACCOUNT_ACTIVATION_DAYS = 7
-
+CCOUNT_ACTIVATION_DAYS = 1 # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = False 
